@@ -1,0 +1,26 @@
+C:\windows\system32> $oldPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine)
+>> if ($oldPath.Split(';') -inotcontains 'C:\minikube'){
+>>  [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine)
+>> }
+>>
+PS C:\windows\system32> minikube version
+minikube : The term 'minikube' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:1
++ minikube version
++ ~~~~~~~~
+  + CategoryInfo     : ObjectNotFound: (minikube:String) [], CommandNotFoundExceptio
+  n
+  + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\windows\system32> minikube version
+minikube : The term 'minikube' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:1
++ minikube version
++ ~~~~~~~~
+  + CategoryInfo     : ObjectNotFound: (minikube:String) [], CommandNotFoundExceptio
+  n
+  + FullyQualifiedErrorId : CommandNotFoundException
